@@ -1,7 +1,7 @@
 package com.linz.wechart_order.model;
 
-import com.imooc.enums.OrderStatusEnum;
-import com.imooc.enums.PayStatusEnum;
+import com.linz.wechart_order.enums.OrderStatusEnum;
+import com.linz.wechart_order.enums.PayStatusEnum;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * Created by 廖师兄
+ * Created by linz
  * 2017-06-11 17:08
  */
 @Entity

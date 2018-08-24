@@ -5,7 +5,7 @@ import com.linz.wechart_order.dto.OrderDTO;
 
 /**
  * 买家
- * Created by 廖师兄
+ * Created by linz
  * 2017-06-22 00:11
  */
 public interface BuyerService {

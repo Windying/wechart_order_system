@@ -1,6 +1,8 @@
 package com.linz.wechart_order.service.impl;
 
 import com.linz.wechart_order.dto.OrderDTO;
+import com.linz.wechart_order.enums.ResultEnum;
+import com.linz.wechart_order.exception.SellException;
 import com.linz.wechart_order.service.BuyerService;
 import com.linz.wechart_order.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
@@ -8,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by 廖师兄
+ * Created by linz
  * 2017-06-22 00:13
  */
 @Service

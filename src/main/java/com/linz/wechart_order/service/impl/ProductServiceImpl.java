@@ -1,12 +1,12 @@
 package com.linz.wechart_order.service.impl;
 
-import com.imooc.dataobject.ProductInfo;
-import com.imooc.dto.CartDTO;
-import com.imooc.enums.ProductStatusEnum;
-import com.imooc.enums.ResultEnum;
-import com.imooc.exception.SellException;
-import com.imooc.repository.ProductInfoRepository;
-import com.imooc.service.ProductService;
+import com.linz.wechart_order.dto.CartDTO;
+import com.linz.wechart_order.enums.ProductStatusEnum;
+import com.linz.wechart_order.enums.ResultEnum;
+import com.linz.wechart_order.exception.SellException;
+import com.linz.wechart_order.model.ProductInfo;
+import com.linz.wechart_order.repository.ProductInfoRepository;
+import com.linz.wechart_order.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * Created by 廖师兄
+ * Created by linz
  * 2017-05-09 17:31
  */
 @Service

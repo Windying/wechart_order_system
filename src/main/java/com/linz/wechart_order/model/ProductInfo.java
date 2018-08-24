@@ -1,8 +1,8 @@
 package com.linz.wechart_order.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.imooc.enums.ProductStatusEnum;
-import com.imooc.utils.EnumUtil;
+import com.linz.wechart_order.enums.ProductStatusEnum;
+import com.linz.wechart_order.utils.EnumUtil;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -13,7 +13,7 @@ import java.util.Date;
 
 /**
  * 商品
- * Created by 廖师兄
+ * Created by linz
  * 2017-05-09 11:30
  */
 @Entity

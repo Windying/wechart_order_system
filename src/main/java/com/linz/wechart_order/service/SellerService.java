@@ -5,7 +5,7 @@ import com.linz.wechart_order.model.SellerInfo;
 
 /**
  * 卖家端
- * Created by 廖师兄
+ * Created by linz
  * 2017-07-29 23:14
  */
 public interface SellerService {

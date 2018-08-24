@@ -1,6 +1,7 @@
 package com.linz.wechart_order.service.impl;
 
 import com.linz.wechart_order.model.ProductCategory;
+import com.linz.wechart_order.repository.ProductCategoryRepository;
 import com.linz.wechart_order.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,7 +10,7 @@ import java.util.List;
 
 /**
  * 类目
- * Created by 廖师兄
+ * Created by linz
  * 2017-05-09 10:16
  */
 @Service

@@ -1,21 +1,19 @@
 package com.linz.wechart_order.service.impl;
 
-import com.imooc.converter.OrderMaster2OrderDTOConverter;
-import com.imooc.dataobject.OrderDetail;
-import com.imooc.dataobject.OrderMaster;
-import com.imooc.dataobject.ProductInfo;
-import com.imooc.dto.CartDTO;
-import com.imooc.dto.OrderDTO;
-import com.imooc.enums.OrderStatusEnum;
-import com.imooc.enums.PayStatusEnum;
-import com.imooc.enums.ResultEnum;
-import com.imooc.exception.SellException;
-import com.imooc.repository.OrderDetailRepository;
-import com.imooc.repository.OrderMasterRepository;
-import com.imooc.service.*;
-import com.imooc.utils.KeyUtil;
-import com.linz.wechart_order.service.OrderService;
-import com.linz.wechart_order.service.ProductService;
+import com.linz.wechart_order.converter.OrderMaster2OrderDTOConverter;
+import com.linz.wechart_order.dto.CartDTO;
+import com.linz.wechart_order.dto.OrderDTO;
+import com.linz.wechart_order.enums.OrderStatusEnum;
+import com.linz.wechart_order.enums.PayStatusEnum;
+import com.linz.wechart_order.enums.ResultEnum;
+import com.linz.wechart_order.exception.SellException;
+import com.linz.wechart_order.model.OrderDetail;
+import com.linz.wechart_order.model.OrderMaster;
+import com.linz.wechart_order.model.ProductInfo;
+import com.linz.wechart_order.repository.OrderDetailRepository;
+import com.linz.wechart_order.repository.OrderMasterRepository;
+import com.linz.wechart_order.service.*;
+import com.linz.wechart_order.utils.KeyUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +30,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Created by 廖师兄
+ * Created by linz
  * 2017-06-11 18:43
  */
 @Service
@@ -48,11 +46,11 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderMasterRepository orderMasterRepository;
 
-    @Autowired
-    private PayService payService;
+//    @Autowired
+//    private PayService payService;
 
-    @Autowired
-    private PushMessageService pushMessageService;
+//    @Autowired
+//    private PushMessageService pushMessageService;
 
     @Autowired
     private WebSocket webSocket;
@@ -170,9 +168,9 @@ public class OrderServiceImpl implements OrderService {
         productService.increaseStock(cartDTOList);
 
         //如果已支付, 需要退款
-        if (orderDTO.getPayStatus().equals(PayStatusEnum.SUCCESS.getCode())) {
-            payService.refund(orderDTO);
-        }
+//        if (orderDTO.getPayStatus().equals(PayStatusEnum.SUCCESS.getCode())) {
+//            payService.refund(orderDTO);
+//        }
 
         return orderDTO;
     }
@@ -197,7 +195,7 @@ public class OrderServiceImpl implements OrderService {
         }
 
         //推送微信模版消息
-        pushMessageService.orderStatus(orderDTO);
+//        pushMessageService.orderStatus(orderDTO);
 
         return orderDTO;
     }

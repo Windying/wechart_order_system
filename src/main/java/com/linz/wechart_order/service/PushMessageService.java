@@ -5,7 +5,7 @@ import com.linz.wechart_order.dto.OrderDTO;
 
 /**
  * 推送消息
- * Created by 廖师兄
+ * Created by linz
  * 2017-07-30 22:08
  */
 public interface PushMessageService {
